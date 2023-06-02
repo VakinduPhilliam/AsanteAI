@@ -1,0 +1,107 @@
+{
+    "status": "success",
+    "body": {
+        "places": [
+            {
+                "id": "place_sikxqf72jnq0jeny2i0u8bxkm9",
+                "playback_uri": "/place?id=place_sikxqf72jnq0jeny2i0u8bxkm9",
+                "file_name": "Kruger National Park, South Africa",
+                "poster":"/public/images/screenshot-1.png",
+                "location": "Mbombela, South Africa",
+                "price":"$270 per person/day",
+                "fee":270,
+                "description":"Zebras, River Crocodile, Lions, Lebombo Mountains, Leopards, Cheetahs, Elephants, African Wild Dog, Black Rhinoceros or Rhinos, Blue Wildebeests, Bushbuck, Buffaloes, Elands, Giraffes, Greater Kudus, Hippopotamus or Hippos, Impalas, Hartebeests, Reedbucks, Nyalas, Roan Antelopes, Warthogs, Waterbucks, White Rhinoceros or White Rhinos, Crocodiles, Spotted Hyenas, 517 species of Birds, Vultures, Eagles, Storks, Bustards, Hornbills, Owls, Black Mambas, Pythons, Baboon Spiders."
+            },
+            {
+                "id": "place_jptmvbs2yizhbim9m67ruz78fh",
+                "playback_uri": "/place?id=place_jptmvbs2yizhbim9m67ruz78fh",
+                "file_name": "Kidepo Valley National Park, Uganda",
+                "poster":"/public/images/screenshot-2.png",
+                "location": "Kaabong, Uganda",
+                "price":"$230 per person/day",
+                "fee":230,
+                "description":"Antelopes, Rugged Savannah, Mount Morungole, Kidepo River, Narus River, Hot Springs, Zebras, Spotted Hyenas, Lions, Buffaloes, Cheetahs, Leopards, Wild Dogs, Elephants, Giraffes, Bat-eared Foxes, Birds (500 Bird Species)."
+            },
+            {
+                "id": "place_mhgewn3qxqp5m3nn096bn3rppg",
+                "playback_uri": "/place?id=place_mhgewn3qxqp5m3nn096bn3rppg",
+                "file_name": "Maasai Mara National Park, Kenya",
+                "poster":"/public/images/screenshot-3.png",
+                "location": "Narok, Kenya",
+                "price":"$190 per person/day",
+                "fee":190,
+                "description":"Lions, Cheetahs, Leopards, Zebras, Gazelles, Wildebeests, The Great Migration, Mara River, Crocodiles, Elephants, Rhinoceros or Rhinos, Hippopotamus or Hippos, Jackals, Foxes, Elands, Duikers, Hartebeests, Birds (470 Bird Species), Raptors, Eagles, Vultures, Hyenas, Storks, Ostriches, Secretary Birds, Falcons, Cranes, Hornbills, Giraffes."
+            },
+            {
+                "id": "place_xjtfzzaznqqi81s38iqi1e218e",
+                "playback_uri": "/place?id=place_xjtfzzaznqqi81s38iqi1e218e",
+                "file_name": "Pemba, Indian Ocean Coast",
+                "poster":"/public/images/screenshot-4.png",
+                "location": "Pemba, Tanzania",
+                "price":"$210 per person/day",
+                "fee":210,
+                "description":"Beautiful White Sandy Beaches,  Coral Reefs, Lagoons, Trigger Fish, Moray Eels, Angelfish, Butterfly Fish, Parrotfish, Pufferfish, Green Sea Turtles, Hawksbill Turtles, Humpback Whales, Whale Sharks, Indian Ocean."
+            },
+            {
+                "id": "place_e50fwnyx3qwdce26tw5g4x03kj",
+                "playback_uri": "/place?id=place_e50fwnyx3qwdce26tw5g4x03kj",
+                "file_name": "Mombasa, Indian Ocean Coast",
+                "poster":"/public/images/screenshot-5.png",
+                "location": "Mombasa, Kenya",
+                "price":"$310 per person/day",
+                "fee":310,
+                "description":"Beautiful White Sandy Beaches,  Coral Reefs, Lagoons, Trigger Fish, Moray Eels, Angelfish, Butterfly Fish, Parrotfish, Pufferfish, Green Sea Turtles, Hawksbill Turtles, Humpback Whales, Whale Sharks, Indian Ocean."
+            },
+            {
+                "id": "place_e2p6ch6xvi98yvcukk2hh1asns",
+                "playback_uri": "/place?id=place_e2p6ch6xvi98yvcukk2hh1asns",
+                "file_name": "Zanzibar, Indian Ocean",
+                "poster":"/public/images/screenshot-6.png",
+                "location": "Zanzibar, Tanzania",
+                "price":"$160 per person/day",
+                "fee":160,
+                "description":"Beautiful White Sandy Beaches,  Coral Reefs, Lagoons, Trigger Fish, Moray Eels, Angelfish, Butterfly Fish, Parrotfish, Pufferfish, Green Sea Turtles, Hawksbill Turtles, Humpback Whales, Whale Sharks, Indian Ocean."
+            },
+            {
+                "id": "place_wmkrr9c88v8173nyjqnq231ggc",
+                "playback_uri": "/place?id=place_wmkrr9c88v8173nyjqnq231ggc",
+                "file_name": "Mokala National Park, South Africa",
+                "poster":"/public/images/screenshot-7.png",
+                "location": "Northern Cape, South Africa",
+                "price":"$240 per person/day",
+                "fee":240,
+                "description":"Giraffes, San Rock Art Engravings, Desert and Semi-Desert, Savanna, Buffaloes, Antelopes, Black and White Rhinoceros or Rhinos, Jackals, Black and Blue Wildebeests, Aardvark, Warthogs, Elands, Gemsbok, Giraffes, Impalas, Kudus, Mountain Reedbucks, Zebras, Hartebeests, Hedgehogs, Springboks"
+            },
+            {
+                "id": "place_xb4mnv7k85eb6ggvfk8dd07eea",
+                "playback_uri": "/place?id=place_xb4mnv7k85eb6ggvfk8dd07eea",
+                "file_name": "Tsavo East National Park, Kenya",
+                "poster":"/public/images/screenshot-8.png",
+                "location": "Voi, Kenya",
+                "price":"$305 per person/day",
+                "fee":305,
+                "description":"Elephants, Lions, Buffaloes, Rhinoceros or Rhinos, Leopards, Cheetahs, Baboons, Aardwolf, Bushbabies, Caracals, Wildcats, Duikers, Elands, Gazelles, Hartebeests, Hyenas, Klipspringers, Mongooses, Pangolins, Porcupines, Zebras, Squirrels, Birds (500 Bird Species), Giraffes, Ostriches, Buzzards, Herons, Hornbills."
+            },
+            {
+                "id": "place_qnbzwgpj0dz7paa89gwdp926gm",
+                "playback_uri": "/place?id=place_qnbzwgpj0dz7paa89gwdp926gm",
+                "file_name": "Murchison Falls National Park, Uganda",
+                "poster":"/public/images/screenshot-9.png",
+                "location": "Masindi, Uganda",
+                "price":"$211 per person/day",
+                "fee":211,
+                "description":"Murchison Falls, River Nile, Hippopotamus or Hippos, Water Bucks, Crocodiles, Buffaloes, Elephants, Lions, Leopards, Giraffes, Hartebeests, Oribis, Uganda Kobs, Primates, Chimpanzees or Chimps, Birds, Shoebills, Savannah, Riverine Forest, Wood Land, Lake Albert, Victoria Nile, Karuma Falls, Water Falls, Kingfishers, Herons, Hornbills, Turacos."
+            },
+            {
+                "id": "place_qnbzwgpj0dz7paa89gwdp926vp",
+                "playback_uri": "/place?id=place_qnbzwgpj0dz7paa89gwdp926vp",
+                "file_name": "Mapungubwe National Park, South Africa",
+                "poster":"/public/images/screenshot-10.png",
+                "location": "Musina, South Africa",
+                "price":"$265 per person/day",
+                "fee":265,
+                "description":"Nile Crocodiles, Thick-billed Cuckoos, Meerkats, Fishing Owls, Hornbills, Cranes, Pelicans, Herons, Hawks, Buzzards, Parrots, Sandpiper, Elephants, Hippopotamus or Hippos, White Rhinoceros or Rhinos, Lions, Leopards, Cheetahs, Wild Dogs, Spotted Hyenas, Brown Hyenas, Elands, Blue Wildebeests, Kudus, Zebras, Bushbucks, Waterbucks, Impalas, Klipspringers, Duikers, Steenboks, Red Hartebeests, Oryx, Giraffes, Warthogs, Bush Pigs, Aardvarks, Baboons, Badgers, Porcupines, Caracals, Vervet Monkeys, Monitor Lizards, African Python, Snouted Cobras, Black Mambas, Puff Adders, Whip or Sand Snakes."
+            }
+        ]
+    }
+}

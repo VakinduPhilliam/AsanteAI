@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Asante AI - Login</title>
+    <link href="/public/carousel-caption.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    <link rel="stylesheet" type="text/css" href="/public/button.css" />
+    <link href="/public/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/public/icon.png" sizes="32x32">
+  </head>
+  <body>
+      <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top" width='30%'> &nbsp;&nbsp; <a style="text-decoration: none;" href="/"><img width="160px" height="55px" src="/public/brand.png" alt="Brand"> </a></td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="center" width='40%'> 
+        <form action="/search" method="GET">
+          <table width="100%" border="0"><tr><td align='center'><input type="text" style="height: 40px; width:100%; background-color:rgb(237, 233, 233);" name="search" id="search" placeholder="Search & Find Holiday Destinations in Africa ......" class="form-control input-m" /> </td><td> &nbsp;&nbsp; <button type="submit" style="height: 35px; width: 45px; border-radius: 4px;"> 🔎 </button> </td></tr></table>
+        </form>
+      </td>
+      <td align='right' valign="center" width='30%'> <a href="/login" id="about" style="text-decoration: none;"><font size="3" color="#a24028"><strong> LOGIN </strong></font></a> &nbsp; | &nbsp; <a href="/signup" id="about" style="text-decoration: none;"><font size="3" color="#a24028"><strong> SIGN UP </strong></font></a> &nbsp; <a href="/about" id="about" style="text-decoration: none;"> <img width="24px" height="23px" src="/public/about.png" alt="Logo"> </a> &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      </table>
+      <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+      <table width='100%' height='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td width='35%'> </td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="top" width='30%' height='100%'>
+
+        
+      <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top">  
+        <center><font size="5" color="#616161"><strong> LOGIN </strong></font></center>
+        <br><br><br>
+      </td> 
+      </tr>
+      <tr> 
+      <td align='left' valign="top"> 
+
+
+      <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top"> 
+
+        <font size="3" color="#616161"><strong>Email:</strong></font><br> <input style="height: 40px; width:100%; background-color:rgb(237, 233, 233);" class="form-control input-m" type="email" id="email" placeholder="Account Email" name="email" maxlength="255" required>
+
+        <br><br>
+
+        <font size="3" color="#616161"><strong>Password:</strong></font><br> <input style="height: 40px; width:100%; background-color:rgb(237, 233, 233);" class="form-control input-m" type="password" id="password" placeholder="Login Password" name="password" maxlength="50" required>
+
+        <br>
+
+        <center><font size="2" color="#14bf98"><strong><span id="workProgress"></span></strong></font></center> 
+        <center><font size="2" color="#14bf98"><strong><span id="ProgressExtras"></span></strong></font></center><br> 
+
+        <center><font size="1" color="#616161"><strong> Powered by <a href="https://cloud.appwrite.io" id="square" style="text-decoration: none;"><font size="1" color="#000"><strong> Appwrite Cloud </strong></font></a> </strong></font></center><br>
+
+        <center>
+
+        <button type="button" id="button" onclick="login()" class="btn-solid-reg" style="font-size: large;">LOGIN</button>
+
+        </center>
+
+      </br></br>
+      <font color="#878787" size="2"><strong> Don't have an account? </strong></font><strong><a style="text-decoration: none;" href="/signup"><font color="#a24028" size="2"> Sign Up for Free &nbsp; <i class="fa fa-user"></i></font></a></strong>
+
+      </br></br>
+      <strong><a style="text-decoration: none;" href="/forgot"><font color="#a24028" size="2"> Forgot Password? &nbsp; </font></a></strong>
+
+      <br><br>
+
+      </td> 
+      </tr> 
+      </table>
+
+      
+
+      </td> 
+      </tr> 
+      </table>
+
+      
+      </br></br>
+
+      <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+
+      <p class="copyright">&copy; <script>document.write(new Date().getFullYear());</script>, Asante AI
+
+
+      </td>
+      <td width='35%'> </td>
+      </tr>
+      </table>
+    </br>
+
+    <script>
+      function login(){
+      $(document).ready(function(){ 
+
+      var email = $(`#email`).val();  
+      var password = $(`#password`).val();  
+
+      if(email != '' && password != '') {  
+
+      $('#workProgress').text(" Signing In .... 🚀");  
+
+      document.getElementById('button').disabled = true;
+      $('#button').text(" SIGNING IN ....");  
+
+        $.ajax({  
+            url:"/signin",  
+            method:"POST",  
+            data:{email:email, password:password},  
+            dataType: "json",
+            success:function(data)  
+            {  
+            if(data.login==1){
+                $('#workProgress').text(" Login Successfully! ✔");
+                
+                
+                document.getElementById('button').disabled = false;
+                $('#button').text("LOGIN");  
+
+                window.location.href = '/home'
+            } else {
+                $('#workProgress').text(" Problem Logging in! ✖");
+                $('#ProgressExtras').text(" Please verify that your email and password are correct.");
+                
+                document.getElementById('button').disabled = false;
+                $('#button').text("LOGIN");  
+            }
+            }  
+        });                                          
+
+        }
+
+      }); 
+      }
+  </script>  
+  <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+  <script src="/public/jquery.js"></script>
+  <script src="/public/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  </body>
+</html>
+

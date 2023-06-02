@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>Asante AI - Place Booking</title>
+    <link href="/public/carousel-caption.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    <link rel="stylesheet" type="text/css" href="/public/button.css" />
+    <link href="/public/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/public/icon.png" sizes="32x32">
+  </head>
+  <body>
+      <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top" width='30%'> &nbsp;&nbsp; <a style="text-decoration: none;" href="/"><img width="160px" height="55px" src="/public/brand.png" alt="Brand"> </a></td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="center" width='40%'> 
+        <form action="/search" method="GET">
+          <table width="100%" border="0"><tr><td align='center'><input type="text" style="height: 40px; width:100%; background-color:rgb(237, 233, 233);" name="search" id="search" placeholder="Search & Find Holiday Destinations in Africa ......" class="form-control input-m" /> </td><td> &nbsp;&nbsp; <button type="submit" style="height: 35px; width: 45px; border-radius: 4px;"> 🔎 </button> </td></tr></table>
+        </form>
+      </td>
+      <td align='right' valign="center" width='30%'> <a href="" id="about" style="text-decoration: none;"><font size="3" color="#a24028"><strong> LOGIN </strong></font></a> &nbsp; | &nbsp; <a href="" id="about" style="text-decoration: none;"><font size="3" color="#a24028"><strong> SIGN UP </strong></font></a> &nbsp; <a href="/about" id="about" style="text-decoration: none;"> <img width="24px" height="23px" src="/public/about.png" alt="Logo"> </a> &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      </table>
+      <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+      <table width='100%' height='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td width='35%'> </td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="top" width='30%' height='100%'>
+
+        
+      <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top">  
+        <center><font size="5" color="#616161"><strong> Place Booking </strong></font></center>
+        <br><br><br>
+      </td> 
+      </tr>
+      <tr> 
+      <td align='left' valign="top"> 
+
+
+      <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top"> 
+
+        <font size="3" color="#616161"><strong>Place:</strong></font> <font size="3" color="#616161"><%= destinationName %></font>
+
+        <br><br>
+
+        <font size="3" color="#616161"><strong>Price:</strong></font> <font size="3" color="#616161"><%= destinationPrice %></font>
+        <form  id="pay" action="/pay" method="POST">
+        <br><br>
+        <font size="3" color="#616161"><strong> Number of People: &nbsp; </strong></font>
+        <select class="form-control-selector" style="border: 1px solid #03989E; font-size: 15px; width: 120px; height: 25px;" name="people" id="people" onchange="updatePrice()">
+          <option class="select-option" value="1">1</option>
+          <option class="select-option" value="2">2</option>
+          <option class="select-option" value="3">3</option>
+          <option class="select-option" value="4">4</option>
+          <option class="select-option" value="5">5</option>
+          <option class="select-option" value="6">6</option>
+          <option class="select-option" value="7">7</option>
+          <option class="select-option" value="8">8</option>
+          <option class="select-option" value="9">9</option>
+          <option class="select-option" value="10">10</option>
+        </select>
+
+        <br><br>
+
+        <font size="3" color="#616161"><strong> Length of Vacation (Days): &nbsp; </strong></font>
+        <select class="form-control-selector" style="border: 1px solid #03989E; font-size: 15px; width: 120px; height: 25px;" name="days" id="days" onchange="updatePrice()">
+          <option class="select-option" value="1">1</option>
+          <option class="select-option" value="2">2</option>
+          <option class="select-option" value="3">3</option>
+          <option class="select-option" value="4">4</option>
+          <option class="select-option" value="5">5</option>
+          <option class="select-option" value="6">6</option>
+          <option class="select-option" value="7">7</option>
+          <option class="select-option" value="8">8</option>
+          <option class="select-option" value="9">9</option>
+          <option class="select-option" value="10">10</option>
+        </select>
+
+        <br><br><br>
+
+        <input type="hidden" name="fee" value="<%= destinationFee %>" id="fee" required>
+        
+        <center>
+
+        <button type="submit" id="card-button" class="btn-solid-reg" style="font-size: large;">Pay $<%= destinationFee %></button>
+        
+        </form>
+        <br>
+        
+        <div id="payment-status-container"></div>
+
+        </center>
+
+        <br><br>
+
+      </td> 
+      </tr> 
+      </table>
+
+      
+
+      </td> 
+      </tr> 
+      </table>
+
+      
+      </br></br>
+
+      <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+
+      <p class="copyright">&copy; <script>document.write(new Date().getFullYear());</script>, Asante AI
+
+
+      </td>
+      <td width='35%'> </td>
+      </tr>
+      </table>
+    </br>
+
+    <script>
+        function updatePrice(){
+        $(document).ready(function(){ 
+
+        var days = $(this).find(`#days`).val();  
+        var people = $(this).find(`#people`).val();  
+        var fee = $(this).find(`#fee`).val();  
+
+        var total = days*people*fee;
+
+        document.getElementById('fee').value = total;
+    
+        $('#card-button').text(`PAY $${total.toLocaleString("en-US")}`); 
+
+        }); 
+        }
+    </script>    
+
+  <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+  <script src="/public/jquery.js"></script>
+  <script src="/public/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  </body>
+</html>
+

@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>HOME</title>
+    <link href="/public/carousel-caption.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    <link rel="stylesheet" type="text/css" href="/public/button.css" />
+    <link href="/public/bootstrap.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/public/icon.png" sizes="32x32">
+  </head>
+  <body>
+    <table width='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td align='left' valign="top" width='30%'> &nbsp;&nbsp; <a style="text-decoration: none;" href="/home"><img width="160px" height="55px" src="/public/brand.png" alt="Brand"> </a></td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="center" width='40%'> 
+        <form action="/search" method="GET">
+          <table width="100%" border="0"><tr><td align='center'><input type="text" style="height: 40px; width:100%; background-color:rgb(237, 233, 233);" name="search" id="search" placeholder="Search & Find Holiday Destinations in Africa ......" class="form-control input-m" /> </td><td> &nbsp;&nbsp; <button type="submit" style="height: 35px; width: 45px; border-radius: 4px;" disabled> 🔎 </button> </td></tr></table>
+        </form>
+      </td>
+      <td align='right' valign="center" width='30%'> <a href="/logout" id="about" style="text-decoration: none;"><font size="3" color="black"><strong>( </strong></font> <font size="3" color="#a24028"><strong> LOGOUT </strong></font> <font size="3" color="black"><strong> )</strong></font></a> &nbsp; &nbsp; <img width="24px" height="23px" src="/public/about.png" alt="Logo"> &nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      </table>
+      <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+      <table width='100%' height='100%' border='0' cellpadding="5px">
+      <tr> 
+      <td width='20%'> </td>    
+      <td border="1px" bordercolor="#bcbcbc" align='center' valign="top" width='60%' height='100%'>
+
+      <font size="4" color="#817e7e"><strong> My Bookings </strong></font></br>
+
+      </br>
+      <% if (bookings.length > 0) {%>
+
+      <table class="table table-hovered">
+          <tbody>
+              <% bookings.forEach((place, index) => { %>
+                  <tr>
+                    <td>
+
+                    <table width='100%' border='0' cellpadding="5px">
+                      <tr> 
+                        <td align='left' valign="top" width='35%'> 
+                          <a style="text-decoration: none;" target="_blank" href="/place?id=<%=place.id%>">
+                          <img width="100%" height="auto" src="<%=place.poster%>" alt="<%=place.file_name%>">
+                          </a>
+                        </td> 
+                        <td align='left' valign="top" width='65%'>  
+                          <a style="text-decoration: none;" target="_blank" href="/place?id=<%=place.id%>">
+                          <font size="4" color="#616161"><strong><%= place.file_name %></strong></font>
+                          <br><br>
+                          <font size="4" color="#616161"><%= place.location %></font>
+                          <br><br><br>
+                          <a class="btn-solid-reg" target="_blank" href="<%=place.playback_uri %>">BOOK NOW</a>
+                          <br><br><br>
+                          </a>
+                        </td> 
+                      </tr>
+                    </table>
+
+                  </td>
+                  </tr>
+              <% }) %>
+          </tbody>
+      </table>
+      
+      <% } else { %> 
+
+        <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+
+        <br><br><br>
+        <font size="3" color="#14bf98"><strong> You haven't placed any bookings! </strong></font>
+        <br><br><br></br>
+
+        <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+
+      <% } %> %>
+
+      
+      </br></br>
+
+      <font size="4" color="#817e7e"><strong> Popular Wildlife Destinations </strong></font></br>
+
+      </br>
+      <% if (places.length > 0) {%>
+
+      <table class="table table-hovered">
+          <tbody>
+              <% places.forEach((place, index) => { %>
+                  <tr>
+                    <td>
+
+                    <table width='100%' border='0' cellpadding="5px">
+                      <tr> 
+                        <td align='left' valign="top" width='35%'> 
+                          <a style="text-decoration: none;" target="_blank" href="/place?id=<%=place.id%>">
+                          <img width="100%" height="auto" src="<%=place.poster%>" alt="<%=place.file_name%>">
+                          </a>
+                        </td> 
+                        <td align='left' valign="top" width='65%'>  
+                          <a style="text-decoration: none;" target="_blank" href="/place?id=<%=place.id%>">
+                          <font size="4" color="#616161"><strong><%= place.file_name %></strong></font>
+                          <br><br>
+                          <font size="4" color="#616161"><%= place.location %></font>
+                          <br><br><br>
+                          <a class="btn-solid-reg" target="_blank" href="<%=place.playback_uri %>">BOOK NOW</a>
+                          <br><br><br>
+                          </a>
+                        </td> 
+                      </tr>
+                    </table>
+
+                  </td>
+                  </tr>
+              <% }) %>
+          </tbody>
+      </table>
+      
+      <% } %>
+
+      
+      </br></br>
+
+      <strong><hr style="background-color: rgb(213, 210, 210);"></strong>
+
+      <p class="copyright">&copy; <script>document.write(new Date().getFullYear());</script>, Asante AI
+
+      </td>
+      <td width='20%'> </td>
+      </tr>
+      </table>
+    </br>
+    <script src="/public/jquery.js"></script>
+    <script src="/public/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  </body>
+</html>
+

@@ -1,0 +1,24 @@
+{
+  "name": "asante",
+  "version": "1.0.0",
+  "description": "Asante AI is an AI powered safari recommendation engine.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Appwrite",
+    "Square"
+  ],
+  "author": "Vakindu Philliam",
+  "license": "MIT-LICENSE",
+  "dependencies": {
+    "appwrite": "^11.0.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "request": "^2.88.2",
+    "square": "^27.0.0",
+    "uuid": "^9.0.0"
+  }
+}
