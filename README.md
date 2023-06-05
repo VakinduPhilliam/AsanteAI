@@ -41,7 +41,7 @@ _Asante AI Interface:_
 
 <br/>
 
-_Asante AI Interface (Video Watch Page):_
+_Asante AI Interface:_
 
 ![Kasseti](/public/ui3.png)
 
